@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .scroll-bar {
+          width: 200px;
+        }
+    </style>
+
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+  
+  <div id="cart-container">
+    <div class="product-row">
+      <img src="img/ghee.jpg" alt="Product 1" class="product-image">
+      <div class="product-details">
+        <h3>Milky Mist Ghee pet 500g</h3>
+        <p class="product-price">$396.00</p>
+        <p>Discount: <input type="number" class="product-discount-percentage" value="5" min="0" max="100">%</p>
+      </div>
+      
+      <p>Quantity:<input type="number" class="product-quantity" value="0" min="1" max="10"></p>
+
+
+      <p class="subtotal">$396.00</p>
+      <button onclick="addToCart(this.parentNode)">Add to Cart</button>
+    </div>
+    <div class="product-row">
+      <img src="img/black.jpg" alt="Product 2" class="product-image">
+      <div class="product-details">
+        <h3>catch black salt sprinkle-200g</h3>
+        <p class="product-price">$42</p>
+        <p>Discount: <input type="number" class="product-discount-percentage" value="5" min="0" max="100">%</p>
+      </div>
+      <p>Quantity:<input type="number" class="product-quantity" value="0" min="1" max="10"></p>
+      <p class="subtotal">$42</p>
+      <button onclick="addToCart(this.parentNode)">Add to Cart</button>
+    </div>
+    <div class="product-row">
+      <img src="img/aasirvaad.jpg" alt="Product 3" class="product-image">
+      <div class="product-details">
+        <h3>Aasirvaad svasti pure cow Ghee-Desi Ghee with rice</h3>
+        <p class="product-price">$185</p>
+        <p>Discount: <input type="number" class="product-discount-percentage" value="5" min="0" max="100">%</p>
+      </div>
+      <p>Quantity:<input type="number" class="product-quantity" value="0" min="1" max="10"></p>
+
+      <p class="subtotal">$185</p>
+      <button onclick="addToCart(this.parentNode)">Add to Cart</button>
+    </div>
+    <div class="product-row">
+      <img src="img/cumin.jpg" alt="Product 4" class="product-image">
+      <div class="product-details">
+        <h3>Amazon brand -vedaka whole seera(cumin) 200g</h3>
+        <p class="product-price">$139</p>
+        <p>Discount: <input type="number" class="product-discount-percentage" value="5" min="0" max="100">%</p>
+      </div>
+      <p>Quantity:<input type="number" class="product-quantity" value="0" min="1" max="10"></p>
+
+      <p class="subtotal">$139</p>
+      <button onclick="addToCart(this.parentNode)">Add to Cart</button>
+    </div>
+    <div class="product-row">
+      <img src="img/fenugreek.jpg" alt="Product 5" class="product-image">
+      <div class="product-details">
+        <h3>Amazon brand -vedaka whole seera(methi) 200g</h3>
+        <p class="product-price">$32</p>
+        <p>Discount: <input type="number" class="product-discount-percentage" value="5" min="0" max="100">%</p>
+      </div>
+      <p>Quantity:<input type="number" class="product-quantity" value="0" min="1" max="10"></p>
+
+      <p class="subtotal">$32</p>
+      <button onclick="addToCart(this.parentNode)">Add to Cart</button>
+    </div>
+    <div class="product-row">
+      <img src="img/sugar.jpg" alt="Product 6" class="product-image">
+      <div class="product-details">
+        <h3>Parry's white label sugar,1kg</h3>
+        <p class="product-price">$44</p>
+        <p>Discount: <input type="number" class="product-discount-percentage" value="5" min="0" max="100">%</p>
+      </div>
+      <p>Quantity:<input type="number" class="product-quantity" value="0" min="1" max="10"></p>
+
+      <p class="subtotal">$44</p>
+      <button onclick="addToCart(this.parentNode)">Add to Cart</button>
+    </div>
+    <div class="product-row">
+      <img src="img/vsugar.jpg" alt="Product 7" class="product-image">
+      <div class="product-details">
+        <h3>Vedaka sugar,1kg</h3>
+        <p class="product-price">$57</p>
+        <p>Discount: <input type="number" class="product-discount-percentage" value="5" min="0" max="100">%</p>
+      </div>
+      <p>Quantity:<input type="number" class="product-quantity" value="0" min="1" max="10"></p>
+
+      <p class="subtotal">$57</p>
+      <button onclick="addToCart(this.parentNode)">Add to Cart</button>
+    </div>
+    <div class="product-row">
+      <img src="img/idhayam.jpg" alt="Product 8" class="product-image">
+      <div class="product-details">
+        <h3>Idhayam gingely oil,1L</h3>
+        <p class="product-price">$490.00</p>
+        <p>Discount: <input type="number" class="product-discount-percentage" value="5" min="0" max="100">%</p>
+      </div>
+      <p>Quantity:<input type="number" class="product-quantity" value="0" min="1" max="10"></p>
+
+      <p class="subtotal">$490.00</p>
+      <button onclick="addToCart(this.parentNode)">Add to Cart</button>
+    </div>
+    <div class="product-row">
+      <img src="img/gingely.jpg" alt="Product 9" class="product-image">
+      <div class="product-details">
+        <h3>Amazon brand-vedaka sesame (gingely) oil bottle</h3>
+        <p class="product-price">$399</p>
+        <p>Discount: <input type="number" class="product-discount-percentage" value="5" min="0" max="100">%</p>
+      </div>
+      <p>Quantity:<input type="number" class="product-quantity" value="0" min="1" max="10"></p>
+
+      <p class="subtotal">$399</p>
+      <button onclick="addToCart(this.parentNode)">Add to Cart</button>
+    </div>
+    <div class="product-row">
+      <img src="img/fortune.jpg" alt="Product 10" class="product-image">
+      <div class="product-details">
+        <h3>Fortune sunlite refined sunflower oil 1L</h3>
+        <p class="product-price">$120</p>
+        <p>Discount: <input type="number" class="product-discount-percentage" value="5" min="0" max="100">%</p>
+      </div>
+      <p>Quantity:<input type="number" class="product-quantity" value="0" min="1" max="10"></p>
+
+      <p class="subtotal">$120</p>
+      <button onclick="addToCart(this.parentNode)">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="totals">
+    <p>Total Amount: <span id="total-amount">$0.00</span></p>
+    <p>Total Savings: <span id="total-savings">$0.00</span></p>
+  </div>
+   <script>
+    function addToCart(product) {
+      const quantityElement = product.querySelector('.product-quantity');
+      const quantity = parseInt(quantityElement.value);
+  
+      if (quantity === 0) {
+        quantityElement.setCustomValidity('Quantity must be greater than 0');
+        quantityElement.reportValidity();
+        return;
+      }
+  
+      const priceElement = product.querySelector('.product-price');
+      const discountPercentageElement = product.querySelector('.product-discount-percentage');
+      const subtotalElement = product.querySelector('.subtotal');
+  
+      const price = parseFloat(priceElement.textContent.replace('$', ''));
+      const discountPercentage = parseInt(discountPercentageElement.value);
+  
+      const discount = (price * quantity * discountPercentage) / 100;
+      const subtotal = price * quantity - discount;
+  
+      subtotalElement.textContent = '$' + subtotal.toFixed(2);
+  
+      updateTotals();
+    }
+  
+    function updateTotals() {
+      const subtotals = document.querySelectorAll('.subtotal');
+      let totalAmount = 0;
+      let totalSavings = 0;
+  
+      subtotals.forEach((subtotal) => {
+        const subtotalValue = parseFloat(subtotal.textContent.replace('$', ''));
+        totalAmount += subtotalValue;
+  
+        const productRow = subtotal.parentNode;
+        const priceElement = productRow.querySelector('.product-price');
+        const quantityElement = productRow.querySelector('.product-quantity');
+        const discountPercentageElement = productRow.querySelector('.product-discount-percentage');
+  
+        const price = parseFloat(priceElement.textContent.replace('$', ''));
+        const quantity = parseInt(quantityElement.value);
+        const discountPercentage = parseInt(discountPercentageElement.value);
+  
+        const originalTotal = price * quantity;
+        const discountedTotal = originalTotal - subtotalValue;
+        const savings = originalTotal - (originalTotal * (100 - discountPercentage)) / 100;
+  
+        totalSavings += savings;
+      });
+  
+      const totalAmountElement = document.getElementById('total-amount');
+      const totalSavingsElement = document.getElementById('total-savings');
+  
+      totalAmountElement.textContent = '$' + totalAmount.toFixed(2);
+      totalSavingsElement.textContent = '$' + totalSavings.toFixed(2);
+  
+      // You can add additional logic here, such as updating the cart in the backend
+    }
+  </script>
+  
+</body>
+</html>
